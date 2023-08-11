@@ -32,6 +32,11 @@ public class UserController {
     @Autowired
     private Utils utils;
 
+    @PostMapping("/admin/signups")
+    public ResponseEntity<?> tempMethod() {       
+        return ResponseEntity.status(HttpStatus.CREATED).body("Checking");
+    }
+    
     @PostMapping("/admin/signup")
     public ResponseEntity<?> createUser(@RequestBody User user) {
         if (utils.isStringNullOrEmpty(user.getFullname()) || utils.isStringNullOrEmpty(user.getUsername()) ||
