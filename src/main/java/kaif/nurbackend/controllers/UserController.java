@@ -32,7 +32,7 @@ public class UserController {
     @Autowired
     private Utils utils;
 
-    @PostMapping("/admin/signups")
+    @GetMapping("/admin/signups")
     public ResponseEntity<?> tempMethod() {       
         return ResponseEntity.status(HttpStatus.CREATED).body("Checking");
     }
